@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="slider.js"></script>
+    <style>
+    *{
+    	margin:0;
+    	padding:0;
+    	box-sizing:border-box;
+    }
+		.container{
+			position:relative;
+			width:1366px;
+			height:768px;
+			overflow:hidden;
+			margin:0 auto;
+		}
+		#list{
+			position:relative;
+			left:0;
+			width:6830px;
+			height:768px;
+			list-style:none;
+		}
+		#list>li{
+			float:left;
+		}
+		#list a{
+			display:block;
+			font-size:30px;
+			color:red;
+		}
+		.dot{
+			position:absolute;
+			left:50%;
+			bottom:10px;
+			margin-left:-50px;
+			list-style:none;
+		}
+		.dot>li{
+			float:left;
+			width:10px;
+			height:10px;
+			border-radius:5px;
+			margin-right:10px;
+			cursor:pointer;
+			background:rgba(255,255,255,0.4);
+		}
+		.dot>li:hover,
+		.dot>li.active{
+			background:#fff;
+		}
+		#left,#right{
+			position:absolute;
+			top:50%;
+			width:40px;
+			height:80px;
+			border:0 none;
+			outline:none;
+			font-size:30px;
+			color:#fff;
+			margin-top:-40px;
+			background:rgba(128,128,128,0.3);
+		}
+		#left{
+			left:0;
+			border-top-right-radius:5px;
+			border-bottom-right-radius:5px;
+		}
+		#right{
+			right:0;
+			border-top-left-radius:5px;
+			border-bottom-left-radius:5px;
+		}
+		#left:hover,
+		#right:hover{
+			background:rgba(0,0,0,0.5);
+		}
+    </style>
+</head>
+<body>
+	<div class="container">
+	<ul id='list'>
+		<li><a href="#"><img src="img/1.jpg" alt=""></a></li>
+		<li><a href="#"><img src="img/2.jpg" alt=""></a></li>
+		<li><a href="#"><img src="img/3.jpg" alt=""></a></li>
+		<li><a href="#"><img src="img/4.jpg" alt=""></a></li>
+		<li><a href="#"><img src="img/5.jpg" alt=""></a></li>
+	</ul>
+	<ul class="dot">
+		<li data-id=0 class="active"><a href="javascript:void(0)"></a></li>
+		<li data-id=1><a href="javascript:void(0)"></a></li>
+		<li data-id=2><a href="javascript:void(0)"></a></li>
+		<li data-id=3><a href="javascript:void(0)"></a></li>
+		<li data-id=4><a href="javascript:void(0)"></a></li>
+	</ul>
+	<button id="left">&lt;</button>
+	<button id="right">&gt;</button>
+	</div>
+	
+</body>
+</html>
